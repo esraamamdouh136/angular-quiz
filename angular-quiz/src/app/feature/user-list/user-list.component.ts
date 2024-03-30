@@ -33,7 +33,7 @@ export class UserListComponent {
   displayedColumns = ['id', 'avatar', 'first_name', 'last_name', 'email'];
   totalPages: number;
   searchText: string = '';
-  pageNumbers: any;
+  pageNumbers: number[];
   currentPage: number;
   isLoading : boolean = false;
   ngOnInit() {
