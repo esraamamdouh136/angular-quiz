@@ -8,18 +8,18 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   templateUrl: './pagination.component.html',
 })
 export class PaginationComponent {
-
-  @Input() totalPages : number;
+  @Input() totalPages: number;
   @Input() pageNumbers: any;
-  @Input() currentPage : number;
+  @Input() currentPage: number;
   @Output() pageChanged: EventEmitter<number> = new EventEmitter<number>();
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  getUsersFor(selectedPageNumber : number) {
-    this.pageChanged.emit(selectedPageNumber);
+  getUsersFor(selectedPageNumber: number) {
+    if (selectedPageNumber <= this.totalPages) {
+      this.pageChanged.emit(selectedPageNumber);
+    }
   }
 }
