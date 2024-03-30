@@ -9,8 +9,11 @@
         border: 5px solid #f3f3f3; /* Light grey */
         border-top: 5px solid #3498db; /* Blue */
         border-radius: 50%;
-        animation: spin 1s linear infinite;
-      }  
+        -webkit-animation: rotating 5s linear infinite;
+        -moz-animation: rotating 5s linear infinite;
+        -ms-animation: rotating 5s linear infinite;
+        -o-animation: rotating 5s linear infinite;
+        animation: rotating 5s linear infinite;      }  
     }
   @keyframes spin {
     0% { transform: rotate(0deg); }
